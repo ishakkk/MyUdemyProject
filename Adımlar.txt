@@ -1,0 +1,5 @@
+1)Api projesi oluþturuldu ve katmanlar hazýrlandý.
+2) Gerekli paketler yüklendi
+3) Class library ler birbirlerine referans edildi.
+4) Mimari kuruldu
+5)Api test edildi
