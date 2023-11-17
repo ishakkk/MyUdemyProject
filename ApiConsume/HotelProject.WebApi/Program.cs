@@ -2,6 +2,7 @@ using HotelProject.BusinessLayer.Abstract;
 using HotelProject.BusinessLayer.Concrete;
 using HotelProject.DataAccessLayer.Abstract;
 using HotelProject.DataAccessLayer.Concrete;
+using HotelProject.DataAccessLayer.EntityFramework;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<Context>();
@@ -20,6 +21,10 @@ builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
 
 builder.Services.AddScoped<ITestimonialDal, EfTestimonialDal>();
 builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
+
+builder.Services.AddScoped<IAboutDal,EFAboutDal>();
+builder.Services.AddScoped<IAboutService,AboutManager>();
+
 //builder.Services.AddScoped
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddCors(opt =>
